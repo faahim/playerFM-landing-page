@@ -2,6 +2,7 @@
 
 .root {
   padding: 1em 0;
-  background: $color-primary;
+  background: $color-header;
+  box-shadow: 0 0 12px 5px rgba(255, 20, 20, 0.122);
   color: white;
 }
