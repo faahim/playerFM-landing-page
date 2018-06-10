@@ -17,7 +17,9 @@
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-spring": "^5.3.12",
+    "typeface-work-sans": "0.0.54"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
