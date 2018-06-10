@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Transition, animated } from 'react-spring';
+import Container from '../components/Container';
 import styles from './Tagline.module.scss';
 
 const prefixes = [
@@ -75,29 +76,31 @@ class Taglines extends Component {
   render() {
     const { prefix, suffix } = this.state;
     return (
-      <div className={styles.tagline}>
-        <div className={styles.prefixes}>
-          <Transition
-            native
-            from={{ opacity: 0, transform: 'translate3d(20px,0,0)' }}
-            enter={{ opacity: 1, transform: 'translate3d(0%,0,0)' }}
-            leave={{ opacity: 0, transform: 'translate3d(-20%,0,0)' }}
-          >
-            {prefixes[prefix]}
-          </Transition>
+      <Container>
+        <div className={styles.tagline}>
+          <div className={styles.prefixes}>
+            <Transition
+              native
+              from={{ opacity: 0, transform: 'translate3d(20px,0,0)' }}
+              enter={{ opacity: 1, transform: 'translate3d(0%,0,0)' }}
+              leave={{ opacity: 0, transform: 'translate3d(-20%,0,0)' }}
+            >
+              {prefixes[prefix]}
+            </Transition>
+          </div>
+          <p>while you</p>
+          <div className={styles.suffixes}>
+            <Transition
+              native
+              from={{ opacity: 0, transform: 'translate3d(-20px,0,0)' }}
+              enter={{ opacity: 1, transform: 'translate3d(0%,0,0)' }}
+              leave={{ opacity: 0, transform: 'translate3d(20%,0,0)' }}
+            >
+              {suffixes[suffix]}
+            </Transition>
+          </div>
         </div>
-        <p>while you</p>
-        <div className={styles.suffixes}>
-          <Transition
-            native
-            from={{ opacity: 0, transform: 'translate3d(-20px,0,0)' }}
-            enter={{ opacity: 1, transform: 'translate3d(0%,0,0)' }}
-            leave={{ opacity: 0, transform: 'translate3d(20%,0,0)' }}
-          >
-            {suffixes[suffix]}
-          </Transition>
-        </div>
-      </div>
+      </Container>
     );
   }
 }
