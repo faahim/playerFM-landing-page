@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styles from './PhoneFrame.module.scss';
-import { setInterval } from 'timers';
 
 class PhoneFrame extends Component {
   constructor(props) {
