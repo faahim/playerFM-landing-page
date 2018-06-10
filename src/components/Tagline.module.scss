@@ -1,0 +1,17 @@
+.tagline p {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.prefixes,
+.suffixes {
+  position: relative;
+  min-height: 50px;
+  p {
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+}
