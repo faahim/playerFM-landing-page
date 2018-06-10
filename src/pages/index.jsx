@@ -1,17 +1,13 @@
 import React from 'react';
 import Container from '../components/Container';
 import Layout from '../components/Layout';
-import WalkSVG from '../components/WalkSVG';
-import Taglines from '../components/Taglines';
+import Banner from '../components/Banner';
 import CTA from '../components/CTA';
 
 const IndexPage = () => (
   <Layout>
-    <Container>
-      <WalkSVG />
-      <Taglines />
-      <CTA />
-    </Container>
+    <Banner />
+    <CTA />
   </Layout>
 );
 
