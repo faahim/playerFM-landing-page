@@ -1,0 +1,9 @@
+@import '../utils/breakpoints';
+.bannerSvg {
+  margin-top: 15px;
+
+  @include media-breakpoint-up(md) {
+    width: 70%;
+    margin: 15px auto;
+  }
+}
