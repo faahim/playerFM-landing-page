@@ -14,15 +14,16 @@ body {
   @include theme(light);
   @include font(body);
 
+  font-size: 1rem;
   line-height: 1.5;
   overflow-x: hidden;
 
   @include media-breakpoint-up(md) {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
 
   @include media-breakpoint-up(xl) {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 }
 
