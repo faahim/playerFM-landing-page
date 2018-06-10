@@ -1,0 +1,37 @@
+.phoneWrapper {
+  transform: scale(0.8) rotate(0deg);
+  // overflow: hidden;
+  width: 300px;
+  height: 620px;
+  // perspective: 200px;
+  // transform-origin: 0 0;
+  // transform: rotate(5deg);
+}
+
+.phoneFrame {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+}
+
+.screens {
+  width: 92%;
+  height: 490px;
+  position: absolute;
+  top: 65px;
+  left: 12px;
+  z-index: -1;
+  background: #111;
+  background-image: url(https://player.fm/assets/promos/n5-screens-ec2d96c5410b537ff45409826aefff702d81b3d61ae6e21243b0ae1167621185.png);
+  background-size: 1100px 525px;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  transition: background-position ease-in-out 0.8s;
+  // animation: shotsSlide 2s;
+}
+
+@keyframes shotsSlide {
+  100% {
+    background-position-x: -280px;
+  }
+}
