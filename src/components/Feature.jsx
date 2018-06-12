@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Container from './Container';
-import styles from './Feature.module.scss';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Container from './Container'
+import styles from './Feature.module.scss'
 
 const Feature = ({ featureSVG, featureTtile, featureDetails }) => (
   <div className={styles.featureItem}>
@@ -20,12 +20,12 @@ const Feature = ({ featureSVG, featureTtile, featureDetails }) => (
       </div>
     </Container>
   </div>
-);
+)
 
 Feature.propTypes = {
   featureTtile: PropTypes.string.isRequired,
   featureDetails: PropTypes.string.isRequired,
   featureSVG: PropTypes.element.isRequired,
-};
+}
 
-export default Feature;
+export default Feature
