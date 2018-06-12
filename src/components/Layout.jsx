@@ -1,11 +1,12 @@
-import 'modern-normalize/modern-normalize.css';
-import { StaticQuery } from 'gatsby';
-import PropTypes from 'prop-types';
-import React from 'react';
-import Helmet from 'react-helmet';
-import 'typeface-work-sans';
-import Header from './Header';
-import styles from './Layout.module.scss';
+import 'modern-normalize/modern-normalize.css'
+import { StaticQuery } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+import Helmet from 'react-helmet'
+import 'typeface-work-sans'
+import Header from './Header'
+import Logo from '../assets/logo.png'
+import styles from './Layout.module.scss'
 
 const Layout = ({ children }) => (
   <React.Fragment>
@@ -30,14 +31,14 @@ const Layout = ({ children }) => (
       )}
     />
 
-    <Header brand={<img src="/imgs/logo.png" alt="PlayerFM Logo" />} />
+    <Header brand={<img src={Logo} alt="PlayerFM Logo" />} />
 
     <main className={styles.main}>{children}</main>
   </React.Fragment>
-);
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-};
+}
 
-export default Layout;
+export default Layout
