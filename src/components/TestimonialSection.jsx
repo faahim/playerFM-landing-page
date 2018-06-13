@@ -27,6 +27,18 @@ const testimonialsData = [
     message: 'My life, My life, would suck, would suck, without you!',
     vendor: 'Lifehacker',
   },
+  {
+    message: "Face tomorrow, Tomorrow isn't yesterday.",
+    vendor: 'TechCrunch',
+  },
+  {
+    message: "It's raining again, tell me something I don't know.",
+    vendor: 'The Verge',
+  },
+  {
+    message: 'My life, My life, would suck, would suck, without you!',
+    vendor: 'Lifehacker',
+  },
 ]
 
 class TestimonialSection extends Component {
@@ -63,8 +75,10 @@ class TestimonialSection extends Component {
         <div
           style={{
             transform: `translateX(${(testimonialsData.length - 1) *
-              0}px) translateY(${(testimonialsData.length - 1) * 20}px)`,
+              0}px) translateY(${this.state.activeItem * 15}px) scale(${1 +
+              (testimonialsData.length - 1 - this.state.activeItem) * 0.08}`,
           }}
+          className={styles.testimonialWrapper}
         >
           {testimonialsData.map((testimonial, index) => (
             <Testimonials
@@ -72,6 +86,7 @@ class TestimonialSection extends Component {
               vendor={testimonial.vendor}
               itemNumber={index}
               activeItem={this.state.activeItem}
+              itemAmount={testimonialsData.length}
             />
           ))}
         </div>

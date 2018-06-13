@@ -2,7 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Testimonials.module.scss'
 
-const Testimonials = ({ message, vendor, itemNumber, activeItem }) => {
+const Testimonials = ({
+  message,
+  vendor,
+  itemNumber,
+  activeItem,
+  itemAmount,
+}) => {
   let activeStyle = {}
   if (itemNumber === activeItem) {
     activeStyle = { zIndex: '9999' }
@@ -22,8 +28,8 @@ const Testimonials = ({ message, vendor, itemNumber, activeItem }) => {
         {
           zIndex: `${itemNumber + 1}`,
           transform: `translateY(-${itemNumber *
-            12}px) translateX(-${itemNumber * 0}px) scale(${1 +
-            itemNumber * 0.05})`,
+            12}px) translateX(-${itemNumber * 0}px) scale(${1 -
+            (itemAmount - itemNumber - 1) * 0.05})`,
         },
         activeStyle,
       )}
@@ -39,6 +45,7 @@ Testimonials.propTypes = {
   vendor: PropTypes.string.isRequired,
   itemNumber: PropTypes.number.isRequired,
   activeItem: PropTypes.number.isRequired,
+  itemAmount: PropTypes.number.isRequired,
 }
 
 export default Testimonials
