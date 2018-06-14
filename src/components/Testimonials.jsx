@@ -54,10 +54,13 @@ class Testimonials extends Component {
               {},
               {
                 zIndex: `${index + 1}`,
+                opacity: `${
+                  activeItem === index ? 1 : 1 - (activeItem - index) * 0.1
+                }`,
                 transform: `translateY(-${
                   activeItem === index
-                    ? 132
-                    : 120 - (activeItem - index - 1) * 12
+                    ? testimonials.length * 12 + 12
+                    : testimonials.length * 12 - (activeItem - index - 1) * 12
                 }px) scale(${
                   activeItem === index ? 1 : 1 - (activeItem - index) * 0.05
                 })`,
