@@ -30,7 +30,7 @@ class Testimonials extends Component {
         this.state.testimonials.length - 1
       )
         ? prevState.activeItem + 1
-        : this.state.testimonials.length - 1,
+        : 0,
     }))
   }
 
@@ -40,13 +40,6 @@ class Testimonials extends Component {
       opacity: '0',
       visibility: 'hidden',
     }
-
-    // let activeStyle = {}
-    // if (index === activeItem) {
-    //   activeStyle = { zIndex: '9999' }
-    // } else if (index > activeItem) {
-
-    // }
     const { testimonials, activeItem } = this.state
 
     return (
@@ -62,9 +55,11 @@ class Testimonials extends Component {
               {
                 zIndex: `${index + 1}`,
                 transform: `translateY(-${
-                  index === activeItem ? 120 : 120 - (activeItem - index) * 12
-                }px) translateX(-${index * 0}px) scale(${
-                  index === activeItem ? 1 : 1 - (activeItem - index) * 0.05
+                  activeItem === index
+                    ? 132
+                    : 120 - (activeItem - index - 1) * 12
+                }px) scale(${
+                  activeItem === index ? 1 : 1 - (activeItem - index) * 0.05
                 })`,
               },
               index > activeItem ? activeStyle : null,
@@ -89,11 +84,6 @@ class Testimonials extends Component {
 
 Testimonials.propTypes = {
   testimonials: PropTypes.arrayOf(PropTypes.object).isRequired,
-  // message: PropTypes.string.isRequired,
-  // vendor: PropTypes.string.isRequired,
-  // index: PropTypes.number.isRequired,
-  // activeItem: PropTypes.number.isRequired,
-  // itemAmount: PropTypes.number.isRequired,
 }
 
 export default Testimonials
