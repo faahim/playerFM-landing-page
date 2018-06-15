@@ -1,55 +1,43 @@
 import React from 'react'
 import Testimonials from './Testimonials'
+import lifeHacker from '../assets/testimonial-sources/lifehacker.png'
+import tested from '../assets/testimonial-sources/tested.png'
+import gigaom from '../assets/testimonial-sources/gigaom.png'
+import androidCentral from '../assets/testimonial-sources/android-central.png'
+import theGuardian from '../assets/testimonial-sources/guardian.png'
+import tomsGuide from '../assets/testimonial-sources/toms-guide.png'
 import styles from './TestimonialSection.module.scss'
 
 const testimonialsData = [
   {
-    message: "Face tomorrow, Tomorrow isn't yesterday.",
-    vendor: 'TechCrunch',
+    message:
+      'Right from the start, I found the experience of using Player FM enjoyable. I’m actually rather surprised this app is free.',
+    vendor: tested,
   },
   {
-    message: "It's raining again, tell me something I don't know.",
-    vendor: 'The Verge',
+    message:
+      'Player FM allows users to aggregate their podcast subscriptions online and play them on any device, right within the browser – no additional software required.',
+    vendor: gigaom,
   },
   {
-    message: 'My life, My life, would suck, would suck, without you!',
-    vendor: 'Lifehacker',
+    message:
+      'The app aims to be a way not just to play podcasts from a range of sources, but to find new ones that you might like.',
+    vendor: theGuardian,
   },
   {
-    message: "Face tomorrow, Tomorrow isn't yesterday.",
-    vendor: 'TechCrunch',
+    message:
+      'Player FM keeps getting better, with new additions such as video support, more audio enhancements, discovery features and more language localization.',
+    vendor: tomsGuide,
   },
   {
-    message: "It's raining again, tell me something I don't know.",
-    vendor: 'The Verge',
+    message:
+      "Fnding new podcast can be tricky. That's where Player FM comes in: The app guides you to smart podcasts based on category, channel, or topics.",
+    vendor: lifeHacker,
   },
   {
-    message: 'My life, My life, would suck, would suck, without you!',
-    vendor: 'Lifehacker',
-  },
-  {
-    message: "Face tomorrow, Tomorrow isn't yesterday.",
-    vendor: 'TechCrunch',
-  },
-  {
-    message: "It's raining again, tell me something I don't know.",
-    vendor: 'The Verge',
-  },
-  {
-    message: 'My life, My life, would suck, would suck, without you!',
-    vendor: 'Lifehacker',
-  },
-  {
-    message: "Face tomorrow, Tomorrow isn't yesterday.",
-    vendor: 'TechCrunch',
-  },
-  {
-    message: "It's raining again, tell me something I don't know.",
-    vendor: 'The Verge',
-  },
-  {
-    message: 'My life, My life, would suck, would suck, without you!',
-    vendor: 'Lifehacker',
+    message:
+      'You tell it the kind of things you like — Android, tech, news, sports, whatever — and it serves up a heaping helping of content.',
+    vendor: androidCentral,
   },
 ]
 
