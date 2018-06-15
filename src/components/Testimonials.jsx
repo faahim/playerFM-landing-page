@@ -69,7 +69,11 @@ class Testimonials extends Component {
             )}
           >
             <p>{testimonial.message}</p>
-            <p>-- {testimonial.vendor}</p>
+            <img
+              src={testimonial.vendor}
+              className={styles.vendorImage}
+              alt="Testimonial Provider"
+            />
           </div>
         ))}
         <div className={styles.btnContainer}>
