@@ -4,35 +4,46 @@
     position: absolute;
     right: 0;
     left: 0;
-    width: 70%;
-    min-height: 180px;
+    width: 80%;
+    min-height: 230px;
     padding: 12px;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 6px;
     box-shadow: 0 12px 50px -3px rgba(199, 142, 142, 0.65);
     transition: all 0.4s;
+    .vendorImage {
+      position: absolute;
+      right: 0;
+      bottom: 25px;
+      left: 0;
+      display: inline-block;
+      width: 40%;
+      height: auto;
+      margin: 0 auto;
+      filter: invert(0.4);
+    }
   }
   .btnContainer {
-    display: inline-block;
-    z-index: 99;
-    width: 80px;
-    margin: 0 auto;
     position: absolute;
-    left: 0;
+    z-index: 99;
     right: 0;
     bottom: 20px;
+    left: 0;
+    display: inline-block;
+    width: 80px;
+    margin: 0 auto;
     button {
       width: 30px;
       height: 30px;
-      background-color: transparent;
       border: 2px solid #fff;
+      margin: 0 5px;
+      background-color: transparent;
       border-radius: 50%;
       color: #fff;
-      margin: 0 5px;
+      outline: none;
       text-align: center;
       vertical-align: middle;
-      outline: none;
     }
   }
 }
