@@ -1,5 +1,6 @@
 import React from 'react'
 import Testimonials from './Testimonials'
+import Container from './Container'
 import lifeHacker from '../assets/testimonial-sources/lifehacker.png'
 import tested from '../assets/testimonial-sources/tested.png'
 import gigaom from '../assets/testimonial-sources/gigaom.png'
@@ -54,7 +55,23 @@ const testimonialsData = [
 
 const TestimonialSection = () => (
   <section id={styles.testimonials}>
-    <Testimonials testimonials={testimonialsData} />
+    <Container>
+      <div className={styles.testimonialContent}>
+        <h3>We've got some great praises!</h3>
+        <Testimonials testimonials={testimonialsData} />
+      </div>
+      <div className={styles.testimonialCta}>
+        <h2>Convinced?</h2>
+        <a
+          href="https://play.google.com/store/apps/details?id=fm.player"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get it Now!
+        </a>
+        <p>Get personalized podcast recommendations in under a minute.</p>
+      </div>
+    </Container>
   </section>
 )
 
