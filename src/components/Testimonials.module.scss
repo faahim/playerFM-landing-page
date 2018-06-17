@@ -1,10 +1,13 @@
 .testimonialWrapper {
+  position: relative;
+  min-height: 280px;
+  padding: 40px 0;
   transition: all 0.3s;
   .testimonialItem {
     position: absolute;
     right: 0;
     left: 0;
-    width: 80%;
+    width: 90%;
     min-height: 230px;
     padding: 12px;
     margin: 0 auto;
@@ -28,7 +31,7 @@
     position: absolute;
     z-index: 99;
     right: 0;
-    bottom: 20px;
+    bottom: 0px;
     left: 0;
     display: inline-block;
     width: 80px;
