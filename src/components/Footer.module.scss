@@ -1,0 +1,13 @@
+@import '../utils/_colors.scss';
+
+footer {
+  padding: 50px 0;
+  text-align: center;
+  .footerLinks {
+    p {
+      a {
+        color: $color-secondary-text;
+      }
+    }
+  }
+}
