@@ -4,7 +4,60 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 400px;
-  padding: 80px 0;
+  padding: 50px 0;
   background-color: lighten($color: $color-primary, $amount: 8%);
+  .testimonialContent {
+    // min-height: 500px;
+    h3 {
+      color: $color-contast-text;
+      font-size: 1.3em;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+  .testimonialCta {
+    padding-top: 40px;
+    color: $color-contast-text;
+    text-align: center;
+    a {
+      display: inline-block;
+      padding: 8px 35px;
+      margin-top: 10px;
+      background-color: $color-primary;
+      border-radius: 35px;
+      box-shadow: 0 12px 50px -3px rgba(199, 142, 142, 0.65);
+      font-size: 1.8em;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s;
+      &::before,
+      &::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+        border-left-color: white;
+        content: '';
+        transform: translateY(-1.5px);
+        transition: all 0.3s;
+        vertical-align: middle;
+        // vertical-align: middle;
+      }
+      &::after {
+        opacity: 0;
+      }
+      &:hover {
+        background-color: darken($color: $color-primary, $amount: 5%);
+        box-shadow: 0 8px 35px -3px rgba(199, 142, 142, 0.95);
+        &::before {
+          opacity: 0;
+          transform: translateX(8px);
+        }
+        &::after {
+          opacity: 1;
+          transform: translateX(8px) translateY(-1.5px);
+        }
+      }
+    }
+  }
 }
